@@ -1,40 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Family Trip</title> <!-- This title will be updated by the script -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>Our Family Trip</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="container">
-       <hgroup id="trip-header">
-           <h1>Loading Trip Details...</h1>
-           <p></p>
-       </hgroup>
-    </header>
+    <div class="main-container">
+        <header id="trip-header">
+            <h1>Loading Trip Details...</h1>
+            <p></p>
+        </header>
 
-    <main class="container">
-        <!-- The checklist will be injected here by the script -->
-        <div id="checklist-section"></div>
+        <main>
+            <div id="checklist-section"></div>
+            <div id="itinerary-section"></div>
+            <div id="info-section-container"></div>
+            <div id="main-comments-section"></div>
+        </main>
+    </div>
 
-        <!-- The full itinerary will be injected here by the script -->
-        <div id="itinerary-section"></div>
-
-        <!-- Extra info sections will be injected here -->
-        <div id="info-section-container"></div>
-        
-        <!-- The main Giscus comment thread will be injected here -->
-        <div id="main-comments-section"></div>
-    </main>
-
-    <footer class="container">
-        <small>Built with ❤️ for the best family trip ever.</small>
+    <footer>
+        <p>Vibecoded with Gemini and Claude</p>
     </footer>
     
-    <!-- This line is crucial. It tells the page where to find the engine. -->
     <script src="script.js"></script>
 </body>
 </html>

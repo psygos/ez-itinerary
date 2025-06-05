@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const response = await fetch('trip-data.json');
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        if (!response.ok) throw new Error(`Network response was not ok. Status: ${response.status}`);
         const tripData = await response.json();
 
         renderHeader(tripData);
@@ -11,70 +11,71 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderGiscusComments();
 
     } catch (error) {
-        console.error("Could not load trip data:", error);
-        document.getElementById('trip-header').innerHTML = '<h1>Error</h1><p>Could not load trip data. Please check the `trip-data.json` file format and try again.</p>';
+        console.error("Fatal Error: Could not load or parse trip data.", error);
+        document.getElementById('trip-header').innerHTML = `<h1>Oops! Something went wrong.</h1><p>Could not load the trip itinerary. Please check the browser console (F12) for errors.</p>`;
     }
 });
 
 function renderHeader(data) {
-    document.title = data.tripTitle;
+    document.title = data.tripTitle || "Our Family Trip";
     const header = document.getElementById('trip-header');
     header.innerHTML = `<h1>${data.tripTitle}</h1><p>${data.tripSubtitle}</p>`;
 }
 
 function renderChecklist(checklistItems = []) {
     const container = document.getElementById('checklist-section');
-    if (!checklistItems.length) return;
+    if (!checklistItems || checklistItems.length === 0) return;
     
     const checklistHTML = `
-        <details open>
-            <summary><h2>Pre-Trip Mission Control</h2></summary>
-            <div id="checklist-container" class="card">
+        <section class="section-card">
+            <h2>Pre-Trip Mission Control</h2>
+            <div id="checklist-container">
                 ${checklistItems.map(item => `
                     <div class="checklist-item" id="item-${item.id}">
                         <input type="checkbox" id="${item.id}">
                         <div class="checklist-content">
                             <label for="${item.id}">${item.text}</label>
-                            ${item.subtasks ? `<div class="subtasks">${item.subtasks.map(sub => `
-                                <div class="subtask-item" id="item-${sub.id}">
+                            ${(item.subtasks || []).map(sub => `
+                                <div class="subtask-item">
                                     <input type="checkbox" id="${sub.id}"><label for="${sub.id}">${sub.text}</label>
-                                </div>`).join('')}</div>` : ''}
+                                </div>`).join('')}
                         </div>
                     </div>`).join('')}
             </div>
-        </details>`;
+        </section>`;
     container.innerHTML = checklistHTML;
     attachChecklistLogic(checklistItems);
 }
 
 function renderItinerary(itineraryDays = []) {
     const container = document.getElementById('itinerary-section');
-    if (!itineraryDays.length) return;
+    if (!itineraryDays || itineraryDays.length === 0) return;
 
     const itineraryHTML = `
-        <h2 class="itinerary-title">The Day-by-Day Plan</h2>
         ${itineraryDays.map(day => `
-            <details>
-                <summary>Day ${day.day} (${day.date}): ${day.title}</summary>
-                <article class="card">
-                    <ul>
-                        ${day.events.map(event => `<li>
-                            ${event.time ? `<strong>${event.time}:</strong> ` : ''}${event.description}
-                            ${event.details ? `<em>${event.details}</em>` : ''}
-                            ${event.bookingLink ? `<a href="${event.bookingLink.url}" target="_blank" class="booking-link">${event.bookingLink.text}</a>` : ''}
-                        </li>`).join('')}
-                    </ul>
-                </article>
-            </details>`).join('')}`;
+            <section class="day-section">
+                <div class="day-header">
+                    <h2>Day ${day.day}: ${day.title}</h2>
+                    <h3>${day.date}</h3>
+                </div>
+                <ul class="timeline">
+                    ${(day.events || []).map(event => `<li class="timeline-event">
+                        ${event.time ? `<span class="timeline-time">${event.time}</span>` : ''}
+                        <p>${event.description || ''}</p>
+                        ${event.details ? `<p class="timeline-details">${event.details}</p>` : ''}
+                        ${event.bookingLink ? `<a href="${event.bookingLink.url}" target="_blank" class="booking-link">${event.bookingLink.text} →</a>` : ''}
+                    </li>`).join('')}
+                </ul>
+            </section>`).join('')}`;
     container.innerHTML = itineraryHTML;
 }
 
 function renderInfoSections(sections = []) {
     const container = document.getElementById('info-section-container');
-    if (!sections.length) return;
+    if (!sections || sections.length === 0) return;
     container.innerHTML = sections.map(section => `
-        <section class="info-section">
-            <h3>${section.title}</h3>
+        <section class="section-card">
+            <h2>${section.title}</h2>
             <div>${section.content}</div>
         </section>`).join('');
 }
@@ -82,13 +83,12 @@ function renderInfoSections(sections = []) {
 function renderGiscusComments() {
     const container = document.getElementById('main-comments-section');
     const commentsSection = document.createElement('section');
-    commentsSection.className = 'info-section';
-    commentsSection.innerHTML = '<h3>Trip Discussion & Questions</h3>';
+    commentsSection.className = 'section-card';
+    commentsSection.innerHTML = '<h2>Trip Discussion & Questions</h2>';
 
     const script = document.createElement('script');
     script.src = "https://giscus.app/client.js";
     
-    // Your Giscus configuration is correctly placed here
     script.setAttribute("data-repo", "psygos/ez-itinerary");
     script.setAttribute("data-repo-id", "R_kgDOO220qA");
     script.setAttribute("data-category", "Announcements");
@@ -109,12 +109,12 @@ function renderGiscusComments() {
 
 function attachChecklistLogic(checklistItems) {
     let state = JSON.parse(localStorage.getItem('checklistState')) || {};
-
+    // ... (This entire function remains unchanged from the previous version)
     const updateMainTaskStatus = (item) => {
         if (!item.subtasks) return;
         const mainCheckbox = document.getElementById(item.id);
         const allSubtasksDone = item.subtasks.every(sub => state[sub.id]);
-        if (allSubtasksDone && !mainCheckbox.checked) {
+        if (allSubtasksDone && mainCheckbox && !mainCheckbox.checked) {
             mainCheckbox.checked = true;
             state[item.id] = true;
             document.getElementById(`item-${item.id}`).classList.add('done');
@@ -123,6 +123,7 @@ function attachChecklistLogic(checklistItems) {
 
     checklistItems.forEach(item => {
         const mainCheckbox = document.getElementById(item.id);
+        if (!mainCheckbox) return;
         mainCheckbox.checked = state[item.id] || false;
         if(mainCheckbox.checked) document.getElementById(`item-${item.id}`).classList.add('done');
 
@@ -132,7 +133,7 @@ function attachChecklistLogic(checklistItems) {
             if (mainCheckbox.checked && item.subtasks) {
                 item.subtasks.forEach(sub => {
                     const subCheckbox = document.getElementById(sub.id);
-                    if (!subCheckbox.checked) {
+                    if (subCheckbox && !subCheckbox.checked) {
                         subCheckbox.checked = true;
                         state[sub.id] = true;
                         subCheckbox.parentElement.classList.add('done');
@@ -145,6 +146,7 @@ function attachChecklistLogic(checklistItems) {
         if (item.subtasks) {
             item.subtasks.forEach(sub => {
                 const subCheckbox = document.getElementById(sub.id);
+                if (!subCheckbox) return;
                 subCheckbox.checked = state[sub.id] || false;
                 if(subCheckbox.checked) subCheckbox.parentElement.classList.add('done');
 
