@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Family Trip</title> <!-- This title will be updated by the script -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="container">
+       <hgroup id="trip-header">
+           <h1>Loading Trip Details...</h1>
+           <p></p>
+       </hgroup>
+    </header>
+
+    <main class="container">
+        <!-- The checklist will be injected here by the script -->
+        <div id="checklist-section"></div>
+
+        <!-- The full itinerary will be injected here by the script -->
+        <div id="itinerary-section"></div>
+
+        <!-- Extra info sections will be injected here -->
+        <div id="info-section-container"></div>
+        
+        <!-- The main Giscus comment thread will be injected here -->
+        <div id="main-comments-section"></div>
+    </main>
+
+    <footer class="container">
+        <small>Built with ❤️ for the best family trip ever.</small>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

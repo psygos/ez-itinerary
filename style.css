@@ -1,0 +1,147 @@
+/* ===== Global Typography & Theming ===== */
+:root {
+    --primary-color: #005a9c; /* A deeper, classier blue */
+    --card-shadow: 0 2px 4px rgba(0,0,0,0.05), 0 2px 6px rgba(0,0,0,0.05);
+    --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    background-color: #f8f9fa;
+}
+
+/* ===== Header Styling ===== */
+header hgroup {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--muted-border-color);
+}
+header h1 { font-weight: 300; letter-spacing: -0.02em; }
+header p { color: var(--muted-color); font-size: 1.1rem; }
+
+/* ===== Section Titles ===== */
+.itinerary-title {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    color: var(--h2-color);
+    text-align: center;
+}
+
+/* ===== Collapsible Sections (Details) ===== */
+details {
+    margin-bottom: 1.25rem;
+    border: none;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+details:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.07); }
+
+summary {
+    padding: 1.25rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    background-color: #ffffff;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+summary::after { /* Custom arrow */
+    content: '↓';
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+details[open] > summary { border-bottom: 1px solid var(--muted-border-color); }
+details[open] > summary::after { transform: rotate(-180deg); }
+
+/* ===== Cards ===== */
+.card {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: #ffffff;
+    padding: 1.75rem 1.5rem;
+}
+
+/* ===== Enhanced Checklist Styling ===== */
+#checklist-container.card { background-color: #fffbeb; }
+.checklist-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f3e9d2;
+}
+.checklist-item:last-child { border-bottom: none; }
+.checklist-item input[type="checkbox"] { margin: 0.25rem 1rem 0 0.25rem; cursor: pointer; }
+.checklist-content { flex: 1; }
+.checklist-item label { margin-bottom: 0; font-weight: 500; cursor: pointer; }
+.checklist-item.done > .checklist-content > label { text-decoration: line-through; color: var(--muted-color); }
+
+/* Subtasks */
+.subtasks { margin-top: 0.75rem; margin-left: 0.5rem; }
+.subtask-item { display: flex; align-items: center; margin-bottom: 0.5rem; }
+.subtask-item input[type="checkbox"] { margin: 0 0.75rem 0 0; transform: scale(0.9); }
+.subtask-item label { font-weight: normal; font-size: 0.9rem; }
+.subtask-item.done label { text-decoration: line-through; color: var(--muted-color); }
+
+/* ===== Itinerary List Styling ===== */
+.card ul { padding-left: 0; list-style: none; }
+.card ul li {
+    position: relative;
+    padding-left: 1.75rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+.card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.card ul li strong { color: var(--primary-color); font-weight: 600; }
+.card ul li em { display: block; font-size: 0.9rem; color: #576574; margin-top: 0.25rem; font-style: normal; }
+
+/* ===== Booking Links & Info Sections ===== */
+.booking-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.4rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+.booking-link:hover { background-color: #003f6e; transform: translateY(-1px); }
+
+.info-section {
+    background-color: white;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: var(--card-shadow);
+}
+.info-section blockquote { font-size: 0.9rem; border-left-color: var(--primary-color); }
+
+/* ===== Animations & Mobile ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+details[open] .card { animation: fadeIn 0.4s ease-out; }
+
+@media (max-width: 768px) {
+    summary { padding: 1rem 1.25rem; font-size: 1rem; }
+    .card { padding: 1.25rem; }
+}

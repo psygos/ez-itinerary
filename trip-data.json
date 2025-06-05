@@ -1,0 +1,98 @@
+{
+  "tripTitle": "Our Singapore Family Adventure",
+  "tripSubtitle": "An unforgettable journey from June 19th to 25th, 2025",
+  "checklist": [
+    {
+      "id": "flights", "text": "Book Flight Tickets",
+      "subtasks": [
+        { "id": "flights-confirm", "text": "Confirm booking for 8 people" },
+        { "id": "flights-seats", "text": "Pre-select seats if possible" }
+      ]
+    },
+    {
+      "id": "visa", "text": "Singapore Entry Requirements",
+      "subtasks": [
+        { "id": "visa-check", "text": "Fill out SG Arrival Card online (3 days before arrival)" }
+      ]
+    },
+    {
+      "id": "hotel", "text": "Book Hotel/Accommodation",
+      "subtasks": [
+        { "id": "hotel-rooms", "text": "Book 4 rooms or suitable family rooms" }
+      ]
+    },
+    {
+      "id": "transfers", "text": "Book Airport Transfers",
+      "subtasks": [
+        { "id": "transfer-arrival", "text": "Book Maxi-Cab for arrival (June 19, ~11PM)" },
+        { "id": "transfer-departure", "text": "Book Maxi-Cab for departure (June 25, 5:15AM)" }
+      ]
+    },
+    {
+      "id": "sentosa", "text": "Book Sentosa Tickets (2 Days)",
+      "subtasks": [
+        { "id": "uss-tickets", "text": "Buy Universal Studios tickets + Express Pass (June 21)" },
+        { "id": "ac-tickets", "text": "Buy Adventure Cove tickets (June 22)" },
+        { "id": "ac-dolphin", "text": "Book Dolphin Encounter (Must book 5+ days ahead!)" }
+      ]
+    },
+    {
+      "id": "attractions", "text": "Book Main Attraction Tickets",
+      "subtasks": [
+        { "id": "gardens-tickets", "text": "Book Gardens by the Bay tickets" },
+        { "id": "zoo-tickets", "text": "Book Singapore Zoo tickets (June 24)" },
+        { "id": "safari-tickets", "text": "Book Night Safari tickets for June 24 (timed entry)" }
+      ]
+    },
+    {
+      "id": "dinner", "text": "Book Farewell Dinner",
+      "subtasks": [
+        { "id": "dinner-reserve", "text": "Reserve Violet Oon for 8 people on June 23" }
+      ]
+    }
+  ],
+  "itinerary": [
+    {
+      "day": 1, "date": "Thu, June 19", "title": "The Adventure Begins",
+      "events": [
+        { "time": "9:45 PM", "description": "Touchdown at <strong>Changi Airport (SIN)</strong>! Welcome to Singapore." },
+        { "time": "11:15 PM", "description": "Transfer to Hotel via pre-booked Maxi-Cab.", "details": "Travel time: ~30-45 mins", "bookingLink": { "url": "https://www.klook.com/en-SG/airport-transfers/", "text": "Book Airport Transfer" } },
+        { "time": "12:00 AM", "description": "Hotel Check-in. Settle in and get a great night's sleep." }
+      ]
+    },
+    {
+      "day": 2, "date": "Fri, June 20", "title": "Awe at Marina Bay",
+      "events": [
+        { "time": "10:00 AM", "description": "Step into a world of futuristic nature at <strong>Gardens by the Bay.</strong>", "details": "Explore Cloud Forest & Flower Dome. Approx. Cost: S$34 Adult", "bookingLink": { "url": "https://www.gardensbythebay.com.sg/en/ticketing.html", "text": "Book Gardens Tickets" } },
+        { "time": "1:00 PM", "description": "Lunch inside the Gardens for convenience." },
+        { "time": "3:00 PM", "description": "A much-needed rest at the hotel during the midday heat." },
+        { "time": "5:30 PM", "description": "Take the classic family photos at <strong>Merlion Park</strong>." },
+        { "time": "6:15 PM", "description": "See the city skyline from the water on a <strong>Singapore River Cruise.</strong>", "details": "40-minute bumboat ride. Approx. Cost: S$25 Adult" },
+        { "time": "7:30 PM", "description": "Dinner at the legendary <strong>Lau Pa Sat</strong> hawker centre." },
+        { "time": "8:45 PM", "description": "End the night with the magical, free <strong>Garden Rhapsody</strong> light and sound show at the Supertree Grove." }
+      ]
+    },
+    {
+      "day": 3, "date": "Sat, June 21", "title": "Sentosa Day 1 - Movie Magic",
+      "events": [
+        { "time": "10:00 AM - 5:00 PM", "description": "A full day of fun at <strong>Universal Studios Singapore!</strong>", "details": "Express Pass is a lifesaver on weekends. Approx. Cost: S$78 Adult", "bookingLink": { "url": "https://www.rwsentosa.com/en/attractions/universal-studios-singapore/tickets", "text": "Book USS Tickets + Express Pass" } },
+        { "time": "Lunch", "description": "Grab a bite inside the park or at the nearby Malaysian Food Street." },
+        { "time": "6:00 PM", "description": "Take the free Sentosa Express monorail to VivoCity for dinner.", "details": "Recommendation: Green Common for delicious plant-based food." }
+      ]
+    },
+    {
+      "day": 4, "date": "Sun, June 22", "title": "Sentosa Day 2 - Water & Dolphins",
+      "events": [
+        { "time": "10:00 AM", "description": "Splash and slide the day away at <strong>Adventure Cove Waterpark.</strong>", "details": "Approx. Cost: S$37 Adult" },
+        { "time": "2:00 PM", "description": "The highlight: the <strong>Dolphin Encounter</strong> at Dolphin Island.", "details": "An unforgettable experience. Must book 5+ days in advance!", "bookingLink": { "url": "https://www.rwsentosa.com/en/attractions/dolphin-island/book-now", "text": "Book Dolphin Encounter" } },
+        { "time": "6:00 PM", "description": "Relaxed beachfront dinner at <strong>Coastes</strong> on Siloso Beach.", "details": "Enjoy good food with your toes in the sand as the sun sets." }
+      ]
+    }
+  ],
+  "infoSections": [
+    {
+      "title": "Essential Info",
+      "content": "<ul><li><strong>Currency:</strong> Singapore Dollar (SGD). Have cash for hawker centres.</li><li><strong>Transport:</strong> Use <strong>Grab</strong> or <strong>Gojek</strong> apps for taxis. Pre-book Maxi-Cabs for group airport transfers.</li><li><strong>Weather:</strong> Hot and humid. Pack light, breathable clothing and an umbrella.</li></ul>"
+    }
+  ]
+}
