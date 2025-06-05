@@ -1,98 +1,193 @@
 {
-  "tripTitle": "Our Singapore Family Adventure",
-  "tripSubtitle": "An unforgettable journey from June 19th to 25th, 2025",
+  "tripTitle": "Singapore Family Trip",
+  "tripSubtitle": "8 members • 5.5 days • June 19-25, 2025",
   "checklist": [
     {
-      "id": "flights", "text": "Book Flight Tickets",
+      "id": "pre-departure",
+      "text": "Pre-Departure Requirements",
       "subtasks": [
-        { "id": "flights-confirm", "text": "Confirm booking for 8 people" },
-        { "id": "flights-seats", "text": "Pre-select seats if possible" }
+        { "id": "sg-arrival-card", "text": "Complete SG Arrival Card online (within 3 days before arrival)" },
+        { "id": "passport-check", "text": "Ensure all passports valid for 6+ months" },
+        { "id": "confirm-late-checkin", "text": "Confirm late check-in with hotel (arriving near midnight)" }
       ]
     },
     {
-      "id": "visa", "text": "Singapore Entry Requirements",
+      "id": "transport",
+      "text": "Transportation Bookings",
       "subtasks": [
-        { "id": "visa-check", "text": "Fill out SG Arrival Card online (3 days before arrival)" }
+        { "id": "airport-arrival", "text": "Book 9-seater maxi cab for June 19 arrival (~S$85-95)" },
+        { "id": "airport-departure", "text": "Book maxi cab for June 25 departure (pickup 5:30 AM)" },
+        { "id": "ez-link", "text": "Buy EZ-Link cards at airport (S$12 each with S$7 stored value)" },
+        { "id": "tourist-pass", "text": "Consider 3-day Tourist Pass (S$29) for unlimited MRT/bus" }
       ]
     },
     {
-      "id": "hotel", "text": "Book Hotel/Accommodation",
+      "id": "day1-bookings",
+      "text": "Day 1 - Gardens & Marina Bay (June 20)",
       "subtasks": [
-        { "id": "hotel-rooms", "text": "Book 4 rooms or suitable family rooms" }
+        { "id": "gardens-tickets", "text": "Book Gardens by the Bay combo tickets (S$34 adult/S$26 child via WhatsApp 86644855)" },
+        { "id": "mbs-skypark", "text": "Book Marina Bay Sands SkyPark slots for afternoon (S$27 adult/S$23 child)" },
+        { "id": "river-cruise", "text": "Optional: Singapore River Cruise tickets (S$25 adult/S$17 child)" }
       ]
     },
     {
-      "id": "transfers", "text": "Book Airport Transfers",
+      "id": "sentosa-bookings",
+      "text": "Day 3 - Sentosa Island (June 22)",
       "subtasks": [
-        { "id": "transfer-arrival", "text": "Book Maxi-Cab for arrival (June 19, ~11PM)" },
-        { "id": "transfer-departure", "text": "Book Maxi-Cab for departure (June 25, 5:15AM)" }
+        { "id": "uss-tickets", "text": "Book Universal Studios tickets (S$78 adult/S$60 child via Karthick)" },
+        { "id": "uss-express", "text": "Consider Express Pass for weekend crowds" },
+        { "id": "wings-time", "text": "Book Wings of Time show for 7:40 PM (S$13 per person)" },
+        { "id": "cable-car", "text": "Optional: Cable Car SkyPass (S$19 adult/S$15 child)" }
       ]
     },
     {
-      "id": "sentosa", "text": "Book Sentosa Tickets (2 Days)",
+      "id": "wildlife-bookings",
+      "text": "Day 4 - Wildlife Parks (June 23)",
       "subtasks": [
-        { "id": "uss-tickets", "text": "Buy Universal Studios tickets + Express Pass (June 21)" },
-        { "id": "ac-tickets", "text": "Buy Adventure Cove tickets (June 22)" },
-        { "id": "ac-dolphin", "text": "Book Dolphin Encounter (Must book 5+ days ahead!)" }
+        { "id": "multi-park-pass", "text": "Buy 5-day Multi-Park Pass (S$125) OR individual tickets" },
+        { "id": "zoo-tickets", "text": "If individual: Zoo tickets (S$42 adult/S$30 child)" },
+        { "id": "breakfast-orangutan", "text": "Book Breakfast with Orangutans (S$45 adult/S$35 child)" },
+        { "id": "night-safari", "text": "Book Night Safari timed entry for 7:30 PM" }
       ]
     },
     {
-      "id": "attractions", "text": "Book Main Attraction Tickets",
+      "id": "day5-bookings",
+      "text": "Day 5 - Science & Jewel (June 24)",
       "subtasks": [
-        { "id": "gardens-tickets", "text": "Book Gardens by the Bay tickets" },
-        { "id": "zoo-tickets", "text": "Book Singapore Zoo tickets (June 24)" },
-        { "id": "safari-tickets", "text": "Book Night Safari tickets for June 24 (timed entry)" }
+        { "id": "science-centre", "text": "Book Science Centre tickets (S$10 adult/S$8 child)" },
+        { "id": "snow-city", "text": "Book Snow City adjacent slots (S$12 for 1 hour)" },
+        { "id": "jewel-attractions", "text": "Decide on Jewel paid attractions (Canopy Park S$6)" }
       ]
     },
     {
-      "id": "dinner", "text": "Book Farewell Dinner",
+      "id": "essentials",
+      "text": "Essential Items to Pack",
       "subtasks": [
-        { "id": "dinner-reserve", "text": "Reserve Violet Oon for 8 people on June 23" }
+        { "id": "weather-gear", "text": "Umbrellas (for sun and rain), sunscreen SPF 50+" },
+        { "id": "clothing", "text": "Light, breathable clothes, comfortable walking shoes" },
+        { "id": "water-bottles", "text": "Reusable water bottles (free refill stations everywhere)" },
+        { "id": "power-bank", "text": "Power banks for phones (for navigation and photos)" }
       ]
     }
   ],
   "itinerary": [
     {
-      "day": 1, "date": "Thu, June 19", "title": "The Adventure Begins",
+      "day": 1,
+      "date": "Thu, June 19",
+      "title": "Arrival Day",
       "events": [
-        { "time": "9:45 PM", "description": "Touchdown at <strong>Changi Airport (SIN)</strong>! Welcome to Singapore." },
-        { "time": "11:15 PM", "description": "Transfer to Hotel via pre-booked Maxi-Cab.", "details": "Travel time: ~30-45 mins", "bookingLink": { "url": "https://www.klook.com/en-SG/airport-transfers/", "text": "Book Airport Transfer" } },
-        { "time": "12:00 AM", "description": "Hotel Check-in. Settle in and get a great night's sleep." }
+        { "time": "9:45 PM", "description": "Land at Changi Airport Terminal 1/2/3" },
+        { "time": "10:45 PM", "description": "Clear immigration and collect luggage", "details": "Get EZ-Link cards at MRT station if needed" },
+        { "time": "11:30 PM", "description": "Meet pre-booked maxi cab driver", "details": "S$85-95 for 9-seater to city center" },
+        { "time": "12:15 AM", "description": "Hotel check-in and rest", "details": "Optional late supper at Newton Food Centre if energy permits" }
       ]
     },
     {
-      "day": 2, "date": "Fri, June 20", "title": "Awe at Marina Bay",
+      "day": 2,
+      "date": "Fri, June 20",
+      "title": "Gardens & Marina Bay",
       "events": [
-        { "time": "10:00 AM", "description": "Step into a world of futuristic nature at <strong>Gardens by the Bay.</strong>", "details": "Explore Cloud Forest & Flower Dome. Approx. Cost: S$34 Adult", "bookingLink": { "url": "https://www.gardensbythebay.com.sg/en/ticketing.html", "text": "Book Gardens Tickets" } },
-        { "time": "1:00 PM", "description": "Lunch inside the Gardens for convenience." },
-        { "time": "3:00 PM", "description": "A much-needed rest at the hotel during the midday heat." },
-        { "time": "5:30 PM", "description": "Take the classic family photos at <strong>Merlion Park</strong>." },
-        { "time": "6:15 PM", "description": "See the city skyline from the water on a <strong>Singapore River Cruise.</strong>", "details": "40-minute bumboat ride. Approx. Cost: S$25 Adult" },
-        { "time": "7:30 PM", "description": "Dinner at the legendary <strong>Lau Pa Sat</strong> hawker centre." },
-        { "time": "8:45 PM", "description": "End the night with the magical, free <strong>Garden Rhapsody</strong> light and sound show at the Supertree Grove." }
+        { "time": "6:00 AM", "description": "Early start at Singapore Botanic Gardens (FREE)", "details": "Beat the heat, explore Jacob Ballas Children's Garden" },
+        { "time": "10:00 AM", "description": "Gardens by the Bay - Cloud Forest & Flower Dome", "details": "S$34 adult/S$26 child. Cool domes perfect for midday heat", "bookingLink": { "url": "https://www.gardensbythebay.com.sg", "text": "Book Gardens Tickets" } },
+        { "time": "1:00 PM", "description": "Lunch at Satay by the Bay", "details": "Hawker-style dining with air-conditioning nearby" },
+        { "time": "2:30 PM", "description": "Marina Bay Sands SkyPark Observation Deck", "details": "S$27 adult/S$23 child. Book afternoon slot", "bookingLink": { "url": "https://www.marinabaysands.com", "text": "Book SkyPark" } },
+        { "time": "4:00 PM", "description": "Explore The Shoppes at Marina Bay Sands", "details": "Free air-conditioned shopping and canal rides" },
+        { "time": "6:00 PM", "description": "Walk to Merlion Park for photos", "details": "Classic Singapore photo opportunity" },
+        { "time": "7:00 PM", "description": "Dinner at Lau Pa Sat Satay Street", "details": "Outdoor BBQ experience, try 10 sticks per person" },
+        { "time": "8:45 PM", "description": "Garden Rhapsody light show at Supertree Grove", "details": "FREE show, arrive 15 minutes early for good spots" }
       ]
     },
     {
-      "day": 3, "date": "Sat, June 21", "title": "Sentosa Day 1 - Movie Magic",
+      "day": 3,
+      "date": "Sat, June 21",
+      "title": "Cultural Exploration",
       "events": [
-        { "time": "10:00 AM - 5:00 PM", "description": "A full day of fun at <strong>Universal Studios Singapore!</strong>", "details": "Express Pass is a lifesaver on weekends. Approx. Cost: S$78 Adult", "bookingLink": { "url": "https://www.rwsentosa.com/en/attractions/universal-studios-singapore/tickets", "text": "Book USS Tickets + Express Pass" } },
-        { "time": "Lunch", "description": "Grab a bite inside the park or at the nearby Malaysian Food Street." },
-        { "time": "6:00 PM", "description": "Take the free Sentosa Express monorail to VivoCity for dinner.", "details": "Recommendation: Green Common for delicious plant-based food." }
+        { "time": "7:00 AM", "description": "Breakfast at Maxwell Food Centre", "details": "Try Tian Tian Chicken Rice (Michelin Bib Gourmand)" },
+        { "time": "8:00 AM", "description": "Explore Chinatown Heritage Quarter", "details": "Buddha Tooth Relic Temple, Pagoda Street shopping" },
+        { "time": "10:30 AM", "description": "National Gallery Singapore", "details": "S$20 adult/S$15 child. Southeast Asian art in colonial buildings" },
+        { "time": "1:00 PM", "description": "Lunch at National Kitchen by Violet Oon", "details": "Elevated Peranakan cuisine" },
+        { "time": "2:30 PM", "description": "Little India exploration", "details": "Tekka Centre, Sri Veeramakaliamman Temple, Mustafa Centre" },
+        { "time": "5:00 PM", "description": "Rest at hotel", "details": "Escape afternoon heat, recharge" },
+        { "time": "6:30 PM", "description": "Kampong Glam evening walk", "details": "Sultan Mosque, Haji Lane street art, Arab Street" },
+        { "time": "8:00 PM", "description": "Dinner at Zam Zam Restaurant", "details": "Famous murtabak since 1908" }
       ]
     },
     {
-      "day": 4, "date": "Sun, June 22", "title": "Sentosa Day 2 - Water & Dolphins",
+      "day": 4,
+      "date": "Sun, June 22",
+      "title": "Sentosa Island Adventure",
       "events": [
-        { "time": "10:00 AM", "description": "Splash and slide the day away at <strong>Adventure Cove Waterpark.</strong>", "details": "Approx. Cost: S$37 Adult" },
-        { "time": "2:00 PM", "description": "The highlight: the <strong>Dolphin Encounter</strong> at Dolphin Island.", "details": "An unforgettable experience. Must book 5+ days in advance!", "bookingLink": { "url": "https://www.rwsentosa.com/en/attractions/dolphin-island/book-now", "text": "Book Dolphin Encounter" } },
-        { "time": "6:00 PM", "description": "Relaxed beachfront dinner at <strong>Coastes</strong> on Siloso Beach.", "details": "Enjoy good food with your toes in the sand as the sun sets." }
+        { "time": "8:00 AM", "description": "Take MRT to HarbourFront Station", "details": "Board Sentosa Express (S$4 per person)" },
+        { "time": "9:00 AM", "description": "Early morning at Siloso Beach", "details": "Beach walk before crowds arrive" },
+        { "time": "10:00 AM", "description": "Universal Studios Singapore opening", "details": "S$78 adult/S$60 child. Head to far end first", "bookingLink": { "url": "https://www.rwsentosa.com", "text": "Book USS Tickets" } },
+        { "time": "12:30 PM", "description": "Lunch inside Universal Studios", "details": "Multiple dining options available" },
+        { "time": "3:00 PM", "description": "Continue USS or try Sea Aquarium", "details": "Sea Aquarium S$41 adult/S$30 child if prefer variety" },
+        { "time": "5:00 PM", "description": "Skyhelix Sentosa for panoramic views", "details": "S$15 adult/S$13 child. Open-air gondola ride" },
+        { "time": "6:30 PM", "description": "Dinner at Malaysian Food Street", "details": "Authentic street food in air-conditioned comfort" },
+        { "time": "7:40 PM", "description": "Wings of Time beach show", "details": "S$13 per person. Arrive 20 minutes early" }
+      ]
+    },
+    {
+      "day": 5,
+      "date": "Mon, June 23",
+      "title": "Wildlife & Local Life",
+      "events": [
+        { "time": "8:00 AM", "description": "Singapore Zoo opening", "details": "S$42 adult/S$30 child OR use multi-park pass", "bookingLink": { "url": "https://www.mandaiwildlife.com", "text": "Book Zoo Tickets" } },
+        { "time": "9:00 AM", "description": "Breakfast with Orangutans at Ah Meng Restaurant", "details": "S$45 adult/S$35 child. Unique dining experience" },
+        { "time": "11:00 AM", "description": "Explore NEW Rainforest Wild Asia", "details": "Opened March 2025, included in multi-park pass" },
+        { "time": "1:00 PM", "description": "Lunch at zoo food court", "details": "Multiple options available" },
+        { "time": "2:30 PM", "description": "Travel to Tiong Bahru neighborhood", "details": "Singapore's hipster district with heritage architecture" },
+        { "time": "3:30 PM", "description": "Tiong Bahru Market local experience", "details": "Try Jian Bo Shui Kueh, explore cafes" },
+        { "time": "5:00 PM", "description": "Return to hotel to rest", "details": "Prepare for night safari" },
+        { "time": "6:30 PM", "description": "Dinner at Old Airport Road Food Centre", "details": "Locals' favorite hawker center" },
+        { "time": "8:00 PM", "description": "Night Safari experience", "details": "S$43 adult/S$31 child. Tram ride and walking trails" }
+      ]
+    },
+    {
+      "day": 6,
+      "date": "Tue, June 24",
+      "title": "Science & Modern Singapore",
+      "events": [
+        { "time": "6:00 AM", "description": "Southern Ridges morning walk", "details": "Henderson Waves Bridge, Mount Faber views (FREE)" },
+        { "time": "9:00 AM", "description": "Hotel breakfast and checkout preparation" },
+        { "time": "10:00 AM", "description": "Science Centre Singapore", "details": "S$10 adult/S$8 child. 1000+ interactive exhibits" },
+        { "time": "12:00 PM", "description": "Snow City for cool fun", "details": "S$12 for 1 hour. Escape the heat" },
+        { "time": "1:30 PM", "description": "Lunch at JCube Mall", "details": "Connected to Science Centre" },
+        { "time": "3:00 PM", "description": "Jewel Changi Airport exploration", "details": "Rain Vortex, Canopy Park (S$6)" },
+        { "time": "5:00 PM", "description": "Early dinner at Jewel", "details": "Multiple dining options available" },
+        { "time": "7:00 PM", "description": "Return to hotel for final packing" },
+        { "time": "9:00 PM", "description": "Optional: Newton Food Centre for late supper", "details": "Final hawker center experience" }
+      ]
+    },
+    {
+      "day": 7,
+      "date": "Wed, June 25",
+      "title": "Departure Day",
+      "events": [
+        { "time": "5:00 AM", "description": "Final sunrise walk at Marina Bay", "details": "Merlion Park without crowds" },
+        { "time": "6:00 AM", "description": "Return to hotel for checkout" },
+        { "time": "6:30 AM", "description": "Depart for airport via pre-booked maxi cab", "details": "Allow 60 minutes for journey" },
+        { "time": "7:30 AM", "description": "Arrive at Changi Airport for check-in", "details": "Complete departure procedures" },
+        { "time": "8:55 AM", "description": "Flight departure", "details": "Farewell Singapore!" }
       ]
     }
   ],
   "infoSections": [
     {
-      "title": "Essential Info",
-      "content": "<ul><li><strong>Currency:</strong> Singapore Dollar (SGD). Have cash for hawker centres.</li><li><strong>Transport:</strong> Use <strong>Grab</strong> or <strong>Gojek</strong> apps for taxis. Pre-book Maxi-Cabs for group airport transfers.</li><li><strong>Weather:</strong> Hot and humid. Pack light, breathable clothing and an umbrella.</li></ul>"
+      "title": "Budget Overview",
+      "content": "<ul><li><strong>Total Budget:</strong> ₹2.4-3.2 lakh (S$3,600-4,800) for 8 people</li><li><strong>Per Person:</strong> ₹30,000-40,000 (S$450-600)</li><li><strong>Estimated Spend:</strong> S$2,050-2,650 total using discounted tickets</li><li><strong>Exchange Rate:</strong> 1 SGD = ₹66.44 (June 2025)</li></ul>"
+    },
+    {
+      "title": "Transportation Tips",
+      "content": "<ul><li><strong>Airport Transfers:</strong> Book 9-seater maxi cab for groups (S$85-95)</li><li><strong>Public Transport:</strong> Buy Tourist Pass (S$29) for 3-day unlimited travel</li><li><strong>Ride-hailing:</strong> Use Grab or Gojek, select 6-seater options</li><li><strong>MRT:</strong> Avoid peak hours 7:30-9:30 AM and 5:30-7:30 PM</li></ul>"
+    },
+    {
+      "title": "Weather Strategy",
+      "content": "<ul><li><strong>Temperature:</strong> 27-32°C with high humidity</li><li><strong>Best Times:</strong> Early morning (6-10 AM) and evening (6-10 PM)</li><li><strong>Afternoon:</strong> Plan indoor activities 10 AM-4 PM</li><li><strong>Essentials:</strong> Umbrella, sunscreen SPF 50+, light clothing</li></ul>"
+    },
+    {
+      "title": "Food Recommendations",
+      "content": "<ul><li><strong>Must-Try Dishes:</strong> Hainanese Chicken Rice, Laksa, Satay, Chili Crab</li><li><strong>Hawker Centers:</strong> Maxwell, Lau Pa Sat, Old Airport Road, Newton</li><li><strong>Budget:</strong> S$5-10 per person at hawker centers</li><li><strong>Splurge:</strong> Violet Oon, Jumbo Seafood for special meals</li></ul>"
     }
   ]
 }
