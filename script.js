@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function renderHeader(data) {
-    document.title = data.tripTitle || "Our Family Trip";
+    document.title = data.tripTitle || "Singapore Trip";
     const header = document.getElementById('trip-header');
     header.innerHTML = `<h1>${data.tripTitle}</h1><p>${data.tripSubtitle}</p>`;
 }
